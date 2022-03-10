@@ -1,10 +1,12 @@
-#Perguntar sobre a lista->
 import turtle
+
+
 def draw_poly(t, n, sz):
     """ Função que desenha um polígono de n lados e tamanho sz """
     for i in range(n):
         t.forward(sz)
         t.left(360/n)
+
 
 tela = turtle.Screen()
 tela=turtle.Screen() # Inicializa a Tela

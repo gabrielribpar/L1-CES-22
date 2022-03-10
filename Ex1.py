@@ -1,10 +1,12 @@
 import turtle
 
+
 def desenhar_quadrado(t,sz):
     """ Faz a Tartaruga t desenhar um quadrado de tamanho sz"""
     for i in range(4):
         t.forward(sz)
         t.left(90)
+
 
 tela=turtle.Screen() # Inicializa a Tela
 tela.bgcolor("lightgreen") #Coloca a cor de fundo
