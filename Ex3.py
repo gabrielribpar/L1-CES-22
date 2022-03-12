@@ -4,3 +4,6 @@ def sum_to(n):
     for i in range(n+1): #Loop para realizar a soma dos valores
         soma=soma+i
     return soma
+
+
+print(sum_to(10))

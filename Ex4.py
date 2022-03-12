@@ -12,3 +12,6 @@ def is_prime(n):
                 primo=False
                 break
     return primo
+
+
+print(is_prime(5))

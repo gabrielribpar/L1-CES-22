@@ -6,3 +6,6 @@ def verifica_palindromo(palavra):
             palindromo=False
             break 
     return palindromo
+
+
+print(verifica_palindromo("aiia"))
