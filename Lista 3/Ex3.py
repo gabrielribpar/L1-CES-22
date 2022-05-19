@@ -56,7 +56,7 @@ class Carro_eletrico(Carro, Eletronico):
         """Carrega a bateria do carro"""
         #Parar o carro (método super refere-se a primeira classe)
         super().parar() 
-        #Desligar o carro
+        #Desligar o carro: Para se usar a segunda classe deve-se isso
         Eletronico.desligar(self)
         self.carga_bateria=100
 
