@@ -24,14 +24,14 @@ class Bolo_Builder:
     def resultado(self):
         return Bolo(self.tipo,self.calda)
 
-
+#Construir classes
 Construir_Bolo=Bolo_Builder()
 Bolo1=Construir_Bolo.resultado()
 Construir_Bolo.build_calda("Morango")
 Construir_Bolo.build_tipo("Casamento")
 Bolo2=Construir_Bolo.resultado()
 
-
+#Prints
 print("Primeiro Bolo:")
 print(Bolo1.tipo,Bolo1.calda)
 print("Segundo Bolo:")

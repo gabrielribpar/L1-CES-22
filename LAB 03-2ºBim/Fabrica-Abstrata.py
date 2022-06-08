@@ -60,9 +60,10 @@ class Bolo_Informal_Factory(Bolo_Factory):
         return Bolo(self.tipo,self.calda)
         
 
-
+#Construir classes
 Bolo=Bolo_Informal_Factory("Chocolate")
 Bolo2=Bolo_Aniversario_Factory("Chocolate")
+#Prints
 print("Primeiro Bolo Criado:")
 print(Bolo.tipo,Bolo.calda)
 print("Segundo Bolo Criado:")

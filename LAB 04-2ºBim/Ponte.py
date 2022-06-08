@@ -119,6 +119,7 @@ class Moto(Veiculos):
 Carro1=Veiculo_Factory("Gabriel","Carro","Ferrari","GM","Combustão","100cv").criar_veiculo()
 Carro1.printar_veiculo()
 
+#Casos de teste
 print("-------------------------------------------------------")
 Caminhao1=Veiculo_Factory("Felipe","Caminhão","Fiat","GM","Hibrido","100cv").criar_veiculo()
 Caminhao1.printar_veiculo()

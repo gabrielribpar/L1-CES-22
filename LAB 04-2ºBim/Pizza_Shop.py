@@ -72,7 +72,7 @@ class Chocolate(Decorator):
     def __init__(self, pissacomponent):
         Decorator.__init__(self, pissacomponent)
 
-
+#Casos de teste
 pizza_peproni = Salty_Pasta(Peperoni(Tomate((Mozzarella(Platter())))))
 print(pizza_peproni.getDescription()+ ": $" + str(pizza_peproni.getTotalCost()))
 pizza_chocolate = Sweet_Pasta(Chocolate(Platter()))
