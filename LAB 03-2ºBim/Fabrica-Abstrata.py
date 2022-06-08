@@ -10,7 +10,7 @@ class Bolo:
 
 
 class Bolo_Factory:
-    """Fábrica Abstrata"""
+    """Fábrica Abstrata para o Bolo"""
     def __init__(self,tipo, calda):
         self.tipo=tipo
         self.calda=calda
@@ -29,6 +29,7 @@ class Bolo_Aniversario_Factory(Bolo_Factory):
     def criar_bolo(self):
         return Bolo(self.tipo,self.calda)
 
+
 class Bolo_Festa_Factory(Bolo_Factory):
     """Fábrica Concreta do bolo de festa"""
     def __init__(self,calda):
@@ -38,6 +39,7 @@ class Bolo_Festa_Factory(Bolo_Factory):
     def criar_bolo(self):
         return Bolo(self.tipo,self.calda)
 
+
 class Bolo_Casamento_Factory(Bolo_Factory):
     """Fábrica Concreta do bolo de casamento"""
     def __init__(self,calda):
@@ -46,6 +48,7 @@ class Bolo_Casamento_Factory(Bolo_Factory):
 
     def criar_bolo(self):
         return Bolo(self.tipo,self.calda)
+
 
 class Bolo_Informal_Factory(Bolo_Factory):
     """Fábrica Concreta do bolo informal"""

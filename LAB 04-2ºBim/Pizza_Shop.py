@@ -12,6 +12,7 @@ class Platter(PizzaComponent):
     """Travessa para montar a Pizza"""
     cost = 0.0
 
+
 class Decorator(PizzaComponent):
     """Decorador"""
     def __init__(self, pissacomponent):
@@ -64,11 +65,13 @@ class Provolone(Decorator):
     def __init__(self, pissacomponent):
         Decorator.__init__(self, pissacomponent)
 
+
 class Chocolate(Decorator):
     """Compnente: Chocolate"""
     cost = 0.75
     def __init__(self, pissacomponent):
         Decorator.__init__(self, pissacomponent)
+
 
 pizza_peproni = Salty_Pasta(Peperoni(Tomate((Mozzarella(Platter())))))
 print(pizza_peproni.getDescription()+ ": $" + str(pizza_peproni.getTotalCost()))

@@ -8,6 +8,7 @@ class Bolo:
         self.tipo=tipo
         self.calda=calda
 
+
 class Bolo_Builder:
     """Builder do Bolo"""
     def __init__(self):
@@ -15,17 +16,21 @@ class Bolo_Builder:
         self.tipo="Informal"
 
     def build_calda(self,calda):
+        "Constroi a calda"
         self.calda=calda
     def build_tipo(self,tipo):
+        "Constroi o tipo"
         self.tipo=tipo
     def resultado(self):
         return Bolo(self.tipo,self.calda)
+
 
 Construir_Bolo=Bolo_Builder()
 Bolo1=Construir_Bolo.resultado()
 Construir_Bolo.build_calda("Morango")
 Construir_Bolo.build_tipo("Casamento")
 Bolo2=Construir_Bolo.resultado()
+
 
 print("Primeiro Bolo:")
 print(Bolo1.tipo,Bolo1.calda)
