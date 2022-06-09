@@ -20,6 +20,7 @@ class Documment:
         self.state=State_Factory(self.nome,next_state).criar_estado()
         print(f"Estado Atual:{next_state}")
 
+
 class State_Factory:
     """Fábrica do Estado"""
     def __init__(self,documento,estado):
@@ -34,14 +35,12 @@ class State_Factory:
             return Published(self.documento)
 
 
-
 class State:
     """Estado"""
     def render():
         pass
     def publish():
         pass
-
 
 
 class Draft(State):

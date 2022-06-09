@@ -1,4 +1,5 @@
 
+from abc import abstractclassmethod
 import email
 from random import randint
 from tokenize import Token
@@ -47,7 +48,7 @@ class Livraria:
     def consulta_cliente(self,cliente):
         for i in range(len(self.clientes)):
             if self.clientes[i]==cliente:
-                self.clientes[i].print_cliente()
+                self.clientes[i].print_pessoa()
 
 
     def remocao_cliente(self,cliente):
@@ -96,20 +97,24 @@ class Livro(Produtos):
         self.edicao=edicao
         self.editora=editora
 
+
 class Pessoa:
     def __init__(self,nome,email):
         self.nome=nome
         self.email=email
+
+    @abstractclassmethod
     def print_pessoa(self):
-        print(f"Nome:{self.nome}")
-        print(f"Email:{self.email}")
+        pass
 
 class Autor(Pessoa):
     def __init__(self,nome,email,titulos_publicados):
         super().__init__(nome,email)
         self.titulos_publicados=titulos_publicados
     
-    def print_autor(self):
+    def print_pessoa(self):
+        print(f"Nome:{self.nome}")
+        print(f"Email:{self.email}")
         super().print_pessoa()
         print("Títulos Publicados:")
         for i in range(len(self.titulos_publicados)):
@@ -121,15 +126,18 @@ class Cliente(Pessoa):
         super().__init__(nome,email)
         self.compras_passadas=compras_passadas
     
-    def print_cliente(self):
-        super().print_pessoa()
+    def print_pessoa(self):
+        print(f"Nome:{self.nome}")
+        print(f"Email:{self.email}")
         print("Títulos Publicados(Código):")
         for i in range(len(self.compras_passadas)):
             print(f"- {self.compras_passadas[i].codigo}")
 
+
 class Calculador_Imposto():
     def __init__(self):
         pass
+
 
 class Compra:
     def __init__(self,produtos,quantidade,codigo):

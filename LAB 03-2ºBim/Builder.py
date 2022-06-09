@@ -1,4 +1,5 @@
 
+from abc import abstractclassmethod
 from distutils.command.build import build
 
 
@@ -8,8 +9,20 @@ class Bolo:
         self.tipo=tipo
         self.calda=calda
 
+class Interface_Bolo_Builder:
+    @abstractclassmethod
+    def build_calda(self,calda):
+         pass
+    @abstractclassmethod
+    def build_tipo(self,tipo):
+        pass
 
-class Bolo_Builder:
+    @abstractclassmethod
+    def resultado(self):
+        pass
+
+
+class Bolo_Builder(Interface_Bolo_Builder):
     """Builder do Bolo"""
     def __init__(self):
         self.calda="Chocolate"
